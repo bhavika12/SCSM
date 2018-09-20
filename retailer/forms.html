@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Retailer</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/sb-admin.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="retailer1.html">Retailer1</a>
+            </div>
+            <ul class="nav navbar-right top-nav">
+               
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Retailer1<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="profile1.html"><i class="fa fa-fw fa-user"></i> Profile</a>
+                        </li>
+                        
+                        <li class="divider"></li>
+                        <li>
+                            <a href="../front/so.html"><onclick="preventBack()"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+							<script type = "text/javascript" >
+        function preventBack() { window.history.forward(1); }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+</script>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="retailer1.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                    </li>
+                      <li>
+                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Feed Data </a>
+                    </li>
+                      <li>
+                        <a href="chain.html"><i class="fa fa-fw fa-edit"></i> Chain View </a>
+                    </li>
+                    <li>
+                        <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
+                    </li>
+                    <li>
+                        <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Forms
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li>
+                                <i class="fa fa-dashboard"></i>  <a href="retailer1.html">Dashboard</a>
+                            </li>
+                            <li class="active">
+                                <i class="fa fa-edit"></i> Forms
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+                    <div class="col-lg-6">
+
+                        
+<br><br>
+                        <h1>Enter your data here....</h1>
+
+                        <form class="js-form">
+
+<div class="form-group">
+        <div class="table-responsive">
+            <table class="table table-condensed">
+             <tbody>
+ <tr>
+                        <td>
+                            Email:
+                        </td>
+                        <td>
+                        <input type="text" id="js-mail" name="mail"></td>
+                 </tr> 
+<tr>
+                        <td>
+                            Password
+                        </td>
+                        <td>
+                        <input type="password" id="js-password" name="password"></td>
+                 </tr>
+                    <tr>
+                        <td>
+                            Product Id:
+                        </td>
+                        <td>
+                        <input type="text" id="pid" name="pid"></td>
+                 </tr>
+  <tr>
+                 <td>Product Type:</td>
+                    <td><input type="text" name="pname"id ="pname"></td>
+                 </tr>
+<tr>                 <td>Date Of Arrival:</td>
+                 <td><input type="text" name="d_o_a" id="doa" placeholder="[dd/mm/yyyy]"></td>
+                </tr>
+   <tr>                 <td>Current Location</td>
+                 <td><input type="text" name="currloc" id="currloc"></td>
+                 </tr> 
+                 <tr>                 <td>Date Of Departure:</td>
+                 <td><input type="text" name="d_o_d" id="dod" placeholder="[dd/mm/yyyy]"></td>
+              
+                   <tr>                 <td>Units</td>
+                 <td><input type="text" name="unit" id="unit"></td>
+                 </tr>
+                   <tr>                 <td>Retailer</td>
+                 <td><input type="text" name="retname" id ="retname"></td>
+                 </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div>
+        <button type="submit"  class="btn btn-lg btn-success"  id="btnAgrega"><i class="fa fa-paper-plane"> </i> Submit</button>
+		 
+    </div>
+    </form>
+ <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+$(function() {
+  const config = {
+    apiKey: "AIzaSyBVhH0jytVEaIHTqoHoS4cArTfsv3p-6DA",
+    authDomain: "livingproducts-b8ef3.firebaseapp.com",
+    databaseURL: "https://livingproducts-b8ef3.firebaseio.com",
+    projectId: "livingproducts-b8ef3",
+    storageBucket: "livingproducts-b8ef3.appspot.com",
+    messagingSenderId: "1049426580199"
+  };
+  firebase.initializeApp(config);
+   
+               const state = {
+                   email: '',
+                   password: '',
+};
+
+$('.js-form').on('submit',event => {
+     event.preventDefault();
+const email =$('#js-mail').val() || state.email;                  
+const password =$('#js-password').val() || state.password;
+const productid =$('#pid').val();
+const producttype =$('#pname').val();
+const Doa =$('#doa').val();
+const loc =$('#currloc').val();
+const Dod =$('#dod').val();
+const retailername =$('#retname').val();
+const units =$('#unit').val();
+   
+    if(productid == ""||producttype == ""||Doa == ""||Dod == "" || retailername == ""|| units == "")
+    {
+        alert("Enter the details in all fields !”");
+    }
+    else{
+	var res=/^[a-zA-Z0-9.!#$%&'+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)$/;
+     if(!email.match(res)){
+			  alert("enter valid email");
+     js-mail.focus();
+            return false;
+             } 
+          if(productid.length < 3)
+        {
+            alert("enter the product id that contain at least three characters");
+            pid.focus();
+            return false;
+        }
+        
+         res=/\d{1,2}\/\d{1,2}\/\d{4}/;
+         if(!res.test(Doa)) 
+              {
+                 alert("enter the correct format of date[dd/mm/yyyy]");
+                  doa.focus();
+                  return false;
+              }
+        res=/[A-Z]+[a-z]/;
+    if(!res.test(loc)) 
+              {
+                  alert("current location must contain at least one uppercase or lowercase letter");
+                  currloc.focus();
+                  return false;
+              }
+         if(!res.test(producttype)) 
+              {
+                 alert("product type must contain at least one uppercase or lowercase letter");
+                  pname.focus();
+                  return false;
+              }
+        res=/\d{1,2}\/\d{1,2}\/\d{4}/;
+         if(!res.test(Dod)) 
+              {
+                 alert("enter the correct format of date[dd/mm/yyyy]");
+                  dod.focus();
+                  return false;
+              }
+    
+       res=/[0-9]/;
+          if(!res.test(units)) 
+              {
+                  alert("units must contain at least three number (0-9)!");
+                  unit.focus();
+                  return false;
+              
+              }
+        res=/[a-z]/;
+         if(!res.test(retailername)) 
+              {
+                 alert("retailer name must contain all lowercase letter");
+                  retname.focus();
+                  return false;
+              }
+    
+    }
+                  
+    if(password == "") {
+      alert("Error: Please check that you've entered your password!");
+      password.focus();
+      return false;
+    }
+     else {
+         if(password.length < 6) {
+        alert("Error: Password must contain at least six characters!");
+        password.focus();
+        return false;
+      }
+      if(password== name) {
+        alert("Error: Password must be different from Username!");
+        password.focus();
+        return false;
+      }
+      re = /[0-9]/;
+      if(!re.test(password)) {
+        alert("Error: password must contain at least one number (0-9)!");
+        password.focus();
+        return false;
+      }
+      re = /[a-z]/;
+      if(!re.test(password)) {
+        alert("Error: password must contain at least one lowercase letter (a-z)!");
+        password.focus();
+        return false;
+      }
+      re = /[A-Z]/;
+      if(!re.test(password)) {
+        alert("Error: password must contain at least one uppercase letter (A-Z)!");
+        password.focus();
+        return false;
+      }
+         
+    alert("You entered a valid password: " + password);
+    } 
+
+  
+
+  console.log(email, password, productid, producttype, Doa, loc, Dod, retailername, units);
+           //adding
+              firebase.auth().signInWithEmailAndPassword(email, password)
+               .then(user => {
+                 state.email = email;
+                state.password =password;
+                $('#js-mail').addClass('hidden');
+				$('#js-password').addClass('hidden');
+               firebase.database().ref('transactions').push({
+                        productid,producttype,Doa,loc,Dod,retailername,units, 
+                });
+				
+       
+            $('.js-form').trigger('reset');
+			alert("Data is successfully Entered");
+	})
+   .catch(error => {
+               console.log(error);
+             });
+});
+              });
+
+</script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

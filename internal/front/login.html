@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>login page</title>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js">
+    </script>
+    <style>
+
+html {
+font-size: 10px;
+}
+html {
+font-family: 'ars_maquette_prolight';
+}
+body {
+font-family: 'ars_maquette_prolight';
+font-size: 14px;
+line-height: 1.42857143;
+color: #313131;
+}
+.blogcnt-part {
+padding: 100px 0 95px 0;
+float: left;
+width: 100%;
+}
+.awp-login {
+padding: 30px 0 !important;
+}
+.center-block {
+display: block;
+margin-right: auto;
+margin-left: auto;
+}
+@media (min-width: 1200px)
+.col-lg-5 {
+width: 41.66666667%;
+}
+.pad0{
+padding: 0 !important;
+}
+* {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+@media (min-width: 1200px)
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+float: left;
+}
+@media (min-width: 769px)
+.col-sm-8 {
+width: 66.66666667%;
+}
+@media (min-width: 769px)
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+float: left;
+}
+.col-sm-8 {
+width: 66.66666667%;
+}
+@media (min-width: 769px)
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+float: left;
+}
+.col-xs-10 {
+width: 83.33333333%;
+}
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+float: left;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+position: relative;
+min-height: 1px;
+padding-right: 15px;
+padding-left: 15px;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+position: relative;
+min-height: 1px;
+padding-right: 15px;
+padding-left: 15px;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+position: relative;
+min-height: 1px;
+padding-right: 15px;
+padding-left: 15px;
+}
+.fltnon {
+float: right!important;
+}
+h2
+{
+display: block;
+font-size: 1.5em;
+-webkit-margin-before: 0.83em;
+-webkit-margin-after: 0.83em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+font-weight: bold;
+}
+.awp-login h2 {
+margin-top: 0;
+color: #1fade4;
+font-family: "ars_maquette_probold";
+font-size: 48px;
+margin-bottom: 0;
+margin-top: 0;
+text-align: center;
+text-transform: uppercase;
+}
+.log-section {
+border: 2px solid #aeaeae;
+padding: 35px 15px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+text-align: center;
+}
+.log-section {
+text-align: center;
+}
+.log-section, .signup {
+margin-top: 25px;
+}
+
+div {
+display: block;
+}
+.log-section {
+text-align: center;
+}
+.log-section, .signup {
+margin-top: 25px;
+}
+
+.signin_firm {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+.log-section input{
+padding: 7px 5px;
+border: 2px solid #aeaeae;
+font-size: 18px;
+margin-top: 15px;
+width: 70%;
+}
+input, button, select, textarea {
+font-family: inherit;
+font-size: inherit;
+line-height: inherit;
+}
+input {
+line-height: normal;
+}
+button, input, optgroup, select, textarea {
+margin: 0;
+font: inherit;
+color: inherit;
+}
+#btnLogin,#btnSignUp,#btnLogout{
+
+     background-color:#1fade4   ;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+#btnLogout
+{
+visibility: hide;
+}
+</style>
+    </head>
+    <body>   
+<br>
+<br>
+
+<div class="blogcnt-part awp-login">
+<div class="col-sm-8 pad0">
+<div class="col-lg-6 col-sm-4 col-xs-6 center-block fltnon">
+<h2>Log In</h2>
+<div class="log-section">
+
+         <input id= "txtEmail" type="email" placeholder="Email">
+         <input id="txtPassword" type="password" placeholder="Password">
+<br>
+<br>     
+         <button id="btnLogin" class="btn btn-action" >
+         Log in  
+         </button>&nbsp;&nbsp;&nbsp;&nbsp;
+         <button id="btnSignUp" class="btn btn-secondary">
+         Sign up
+         </button>
+       
+  </div>
+</div>
+</div>
+ 
+
+       
+</center>         <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+           <script>
+             // Initialize Firebase
+                var config = {
+                              apiKey: "AIzaSyBVhH0jytVEaIHTqoHoS4cArTfsv3p-6DA",
+                              authDomain: "livingproducts-b8ef3.firebaseapp.com",
+                              databaseURL: "https://livingproducts-b8ef3.firebaseio.com",
+                              projectId: "livingproducts-b8ef3",
+                              storageBucket: "livingproducts-b8ef3.appspot.com",
+                              messagingSenderId: "1049426580199"
+                              };
+               firebase.initializeApp(config);
+</script>
+ 
+               <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+              //Get elements
+              const txtEmail= document.getElementById('txtEmail');
+              const txtPassword= document.getElementById('txtPassword');
+              const btnLogin= document.getElementById('btnLogin');
+              const btnSignUp= document.getElementById('btnSignUp');
+              const btnLogout= document.getElementById('btnLogout');
+
+              //login
+              btnLogin.addEventListener('click', e => {
+               
+              //get email & pass
+              const email = txtEmail.value;
+              const pass = txtPassword.value;
+              
+              const auth = firebase.auth();
+                           
+              //f login
+              const promise =auth.signInWithEmailAndPassword(email,pass);
+ promise.catch(e => console.log(e.message));
+ var res=/^[a-zA-Z0-9.!#$%&'+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)$/;
+ if(email=="satyamt49@gmail.com" && pass=="Satyam1" )
+{
+      
+     $('#btnLogin').on('click', function() { window.location = '../admin/admin.html'; });
+}
+
+ 
+else if(email=="gupta.shivam415@gmail.com" && pass=="Shivam100")
+{
+     $('#btnLogin').on('click', function() { window.location = '../supplier/supplier.html'; });
+}
+else if(email=="bhavikagarg8@gmail.com" && pass=="Bhavika1")
+{
+     $('#btnLogin').on('click', function() {  window.location = '../retailer/retailer1.html'; });
+}
+else if(email=="someshverma20@gmail.com" && pass=="Somesh07")
+{
+     $('#btnLogin').on('click', function() { window.location = '../retailer/retailer2.html'; });
+}
+                  else if(!email.match(res)){
+			  alert("enter valid email");
+     txtEmail.focus();
+            return false;
+             } 
+                  
+else
+{ if(email == " ")
+                      {
+                          alert("please enter the email id and password");
+                          txtEmail.focus();
+                          return false;
+                      }
+ else{
+    
+ window.open("../new/new.html");
+ }
+}                      
+              });
+           
+              //sign up
+              btnSignUp.addEventListener('click', e=> {
+               
+              //get email & pass
+              const email = txtEmail.value;
+              const pass = txtPassword.value;
+              const auth = firebase.auth();
+              
+              //f sign up
+              const promise =auth.createUserWithEmailAndPassword(email,pass);
+              promise.catch(e => console.log(e.message));
+       $('#btnSignUp').on('click', function() { window.location = 'sign-up.html'; });
+           
+              });
+              
+                //log out
+              btnLogout.addEventListener('click', e =>{
+                 firebase.auth().signOut();
+                 });
+
+
+
+              //add a realtime listener
+              firebase.auth().onAuthStateChanged(firebaseUser => {
+              if(firebaseUser) {
+               console.log(firebaseUser);
+               btnLogout.classList.remove('hide');
+             } else {
+               console.log('not logged in');
+               btnLogout.classList.add('hide');
+                }
+              });            
+          </script>
+
+     </body>
+</html>
